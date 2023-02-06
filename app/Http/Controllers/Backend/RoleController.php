@@ -25,7 +25,7 @@ class RoleController extends Controller
         $roles = Role::orderBy('id', 'DESC')->paginate($this->itemPerPage);
         $permissions = Permission::pluck('name', 'id');
         $this->putSL($roles);
-        return view('dashboard.role.index', compact('roles', 'permissions'));
+        return view('backend.role.index', compact('roles', 'permissions'));
     }
 
     /**
@@ -37,7 +37,7 @@ class RoleController extends Controller
     {
         $this->checkPermission('role.create');
         $permissions = Permission::pluck('name', 'id');
-        return view('dashboard.role.create', compact('permissions'));
+        return view('backend.role.create', compact('permissions'));
     }
 
     /**
@@ -69,7 +69,7 @@ class RoleController extends Controller
     public function show(Role $role)
     {
         $this->checkPermission('role.show');
-        return view('dashboard.role.show', compact('role'));
+        return view('backend.role.show', compact('role'));
     }
 
     /**
@@ -83,7 +83,7 @@ class RoleController extends Controller
         $this->checkPermission('role.edit');
         $permission = Permission::pluck('name', 'id');
 
-        return view('dashboard.role.edit', compact('role', 'permission'));
+        return view('backend.role.edit', compact('role', 'permission'));
     }
 
     /**

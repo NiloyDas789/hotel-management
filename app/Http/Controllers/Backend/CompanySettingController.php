@@ -12,10 +12,11 @@ class CompanySettingController extends Controller
 {
     public function editCompanySetting()
     {
-        $this->checkPermission('settings.access');
+        $this->checkPermission('status.access');
+        // dd('so;fkajs');
 
         $company_setting = CompanySetting::first();
-        return view('dashboard.settings.company_setting', compact('company_setting'));
+        return view('backend.settings.company_setting', compact('company_setting'));
     }
 
     public function updateCompanySetting(Request $request): RedirectResponse
