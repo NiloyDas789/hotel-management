@@ -1,5 +1,8 @@
 import _ from 'lodash';
 window._ = _;
+import Alpine from 'alpinejs';
+window.Alpine = Alpine;
+Alpine.start();
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
