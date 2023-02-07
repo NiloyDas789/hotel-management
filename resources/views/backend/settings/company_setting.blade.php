@@ -44,9 +44,17 @@
                             <i class="lni lni-pencil-alt"></i>
                         </button>
                     </div>
-                    <form action="{{ route('company-setting.update') }}" method="POST">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form action="{{ route('company-setting.update') }}" method="post" enctype="multipart/form-data">
                         @csrf
-                        @method('PUT')
                         <div class="profile-info">
                             <div class="row d-flex">
                                 <div class="col-lg-6">
@@ -55,8 +63,11 @@
                                             <img src="{{ asset('') }}backend/assets/images/profile/profile-1.png"
                                                 alt="">
                                             <div class="update-image">
-                                                <input type="file">
-                                                <label for=""><i class="lni lni-cloud-upload"></i></label>
+                                                <input type="file" name="logo" id="logo">
+                                                <label for="logo"><i class="lni lni-cloud-upload"></i></label>
+                                                @error('logo')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="profile-meta">
@@ -71,8 +82,11 @@
                                             <img src="{{ asset('') }}backend/assets/images/profile/profile-1.png"
                                                 alt="">
                                             <div class="update-image">
-                                                <input type="file">
-                                                <label for=""><i class="lni lni-cloud-upload"></i></label>
+                                                <input type="file" name="footer_logo" id="footer_logo">
+                                                <label for="footer_logo"><i class="lni lni-cloud-upload"></i></label>
+                                                @error('footer_logo')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="profile-meta">
@@ -91,85 +105,144 @@
                                 <div class="col-12">
                                     <div class="input-style-1">
                                         <label>Company Name</label>
-                                        <input type="text" placeholder="Company Name">
+                                        <input type="text" name="name" value="{{ $company_setting->name }}"
+                                            class="@error('name') is-invalid @enderror" placeholder="Company Name">
+                                        @error('name')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-style-1">
                                         <label>Email</label>
-                                        <input type="email" placeholder="Email">
+                                        <input type="email" name="email" value="{{ $company_setting->email }}"
+                                            class="@error('email') is-invalid @enderror" placeholder="Email">
+                                        @error('email')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xxl-6">
                                     <div class="input-style-1">
-                                        <label>Mobile 1</label>
-                                        <input type="text" placeholder="Mobile Number ">
+                                        <label>Mobile Number 1</label>
+                                        <input type="text" name="mobile1" value="{{ $company_setting->mobile1 }}"
+                                            class="@error('mobile1') is-invalid @enderror" placeholder="Mobile Number ">
+                                        @error('mobile1')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xxl-6">
                                     <div class="input-style-1">
-                                        <label>Mobile 2</label>
-                                        <input type="text" placeholder="Mobile Number ">
+                                        <label>Mobile Number 2</label>
+                                        <input type="text" name="mobile2" value="{{ $company_setting->mobile2 }}"
+                                            class="@error('mobile2') is-invalid @enderror" placeholder="Mobile Number ">
+                                        @error('mobile2')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-style-1">
                                         <label>Location</label>
-                                        <input type="text" placeholder="Location">
+                                        <input type="text" name="location" value="{{ $company_setting->location }}"
+                                            class="@error('location') is-invalid @enderror" placeholder="Location">
+                                        @error('location')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xxl-6">
                                     <div class="input-style-1">
                                         <label>Facebook</label>
-                                        <input type="text" placeholder="Facebook">
+                                        <input type="text" name="facebook" value="{{ $company_setting->facebook }}"
+                                            class="@error('facebook') is-invalid @enderror" placeholder="Facebook">
+                                        @error('facebook')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xxl-6">
                                     <div class="input-style-1">
                                         <label>Twitter</label>
-                                        <input type="text" placeholder="Twitter">
+                                        <input type="text" name="twitter" value="{{ $company_setting->twitter }}"
+                                            class="@error('twitter') is-invalid @enderror" placeholder="Twitter">
+                                        @error('twitter')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xxl-6">
                                     <div class="input-style-1">
                                         <label>Instagram</label>
-                                        <input type="text" placeholder="Instagram">
+                                        <input type="text" name="instagram" value="{{ $company_setting->instagram }}"
+                                            class="@error('instagram') is-invalid @enderror" placeholder="Instagram">
+                                        @error('instagram')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xxl-6">
                                     <div class="input-style-1">
                                         <label>Whatsapp</label>
-                                        <input type="text" placeholder="Whatsapp">
+                                        <input type="text" name="whatsapp" value="{{ $company_setting->whatsapp }}"
+                                            class="@error('whatsapp') is-invalid @enderror" placeholder="Whatsapp">
+                                        @error('whatsapp')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-style-1">
-                                        <label>About Me</label>
-                                        <textarea placeholder="Type here" rows="6"></textarea>
+                                        <label>About</label>
+                                        <textarea name="about" value="{{ $company_setting->about }}" class="@error('about') is-invalid @enderror"
+                                            placeholder="Type here" rows="6"></textarea>
+                                        @error('about')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xxl-6">
                                     <div class="input-style-1">
                                         <label>Meta Title</label>
-                                        <input type="text" placeholder="Meta Title">
+                                        <input type="text" name="meta_title"
+                                            value="{{ $company_setting->meta_title }}"
+                                            class="@error('meta_title') is-invalid @enderror" placeholder="Meta Title">
+                                        @error('meta_title')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xxl-6">
                                     <div class="input-style-1">
                                         <label>Meta Keywords</label>
-                                        <input type="text" placeholder="Meta Keywords">
+                                        <input type="text" name="meta_keywords"
+                                            value="{{ $company_setting->meta_keywords }}"
+                                            class="@error('meta_keywords') is-invalid @enderror"
+                                            placeholder="Meta Keywords">
+                                        @error('meta_keywords')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-style-1">
                                         <label>Meta Description</label>
-                                        <textarea placeholder="Type here" rows="4"></textarea>
+                                        <textarea name="meta_description" value="{{ $company_setting->meta_description }}"
+                                            class="@error('meta_description') is-invalid @enderror" placeholder="Type here" rows="4"></textarea>
+                                        @error('meta_description')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-style-1">
                                         <label>About Footer</label>
-                                        <textarea placeholder="Type here" rows="2"></textarea>
+                                        <textarea name="about_footer" value="{{ $company_setting->about_footer }}"
+                                            class="@error('about_footer') is-invalid @enderror" placeholder="Type here" rows="2"></textarea>
+                                        @error('about_footer')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12">

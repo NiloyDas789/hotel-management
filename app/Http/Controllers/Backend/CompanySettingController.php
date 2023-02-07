@@ -21,6 +21,7 @@ class CompanySettingController extends Controller
 
     public function updateCompanySetting(Request $request): RedirectResponse
     {
+        // dd($request->all());
         $this->checkPermission('settings.edit');
 
         $request->validate([
@@ -42,11 +43,11 @@ class CompanySettingController extends Controller
             'meta_keywords'    => 'nullable|string',
             'meta_description' => 'nullable|string',
 
-            'paypal_mode'                  => 'required|string',
-            'paypal_client_id'             => 'nullable|string',
-            'paypal_client_secret'         => 'nullable|string',
-            'invoice_note_to_recipient'    => 'nullable|string',
-            'invoice_terms_and_conditions' => 'nullable|string',
+            // 'paypal_mode'                  => 'required|string',
+            // 'paypal_client_id'             => 'nullable|string',
+            // 'paypal_client_secret'         => 'nullable|string',
+            // 'invoice_note_to_recipient'    => 'nullable|string',
+            // 'invoice_terms_and_conditions' => 'nullable|string',
         ]);
 
         $companySetting = CompanySetting::first();
@@ -87,11 +88,11 @@ class CompanySettingController extends Controller
             'meta_keywords'    => $request->input('meta_keywords'),
             'meta_description' => $request->input('meta_description'),
 
-            'paypal_mode'                  => $request->input('paypal_mode'),
-            'paypal_client_id'             => $request->input('paypal_client_id'),
-            'paypal_client_secret'         => $request->input('paypal_client_secret'),
-            'invoice_note_to_recipient'    => $request->input('invoice_note_to_recipient'),
-            'invoice_terms_and_conditions' => $request->input('invoice_terms_and_conditions'),
+            // 'paypal_mode'                  => $request->input('paypal_mode'),
+            // 'paypal_client_id'             => $request->input('paypal_client_id'),
+            // 'paypal_client_secret'         => $request->input('paypal_client_secret'),
+            // 'invoice_note_to_recipient'    => $request->input('invoice_note_to_recipient'),
+            // 'invoice_terms_and_conditions' => $request->input('invoice_terms_and_conditions'),
         ]);
 
         return back()->with('success', 'Settings Updated.');
