@@ -188,7 +188,7 @@
                                         <input type="text" name="name" value="{{ $company_setting->name }}"
                                             class="@error('name') is-invalid @enderror" placeholder="Company Name">
                                         @error('name')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -198,7 +198,7 @@
                                         <input type="email" name="email" value="{{ $company_setting->email }}"
                                             class="@error('email') is-invalid @enderror" placeholder="Email">
                                         @error('email')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -208,7 +208,7 @@
                                         <input type="text" name="mobile1" value="{{ $company_setting->mobile1 }}"
                                             class="@error('mobile1') is-invalid @enderror" placeholder="Mobile Number ">
                                         @error('mobile1')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -218,7 +218,7 @@
                                         <input type="text" name="mobile2" value="{{ $company_setting->mobile2 }}"
                                             class="@error('mobile2') is-invalid @enderror" placeholder="Mobile Number ">
                                         @error('mobile2')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@
                                         <input type="text" name="location" value="{{ $company_setting->location }}"
                                             class="@error('location') is-invalid @enderror" placeholder="Location">
                                         @error('location')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -238,7 +238,7 @@
                                         <input type="text" name="facebook" value="{{ $company_setting->facebook }}"
                                             class="@error('facebook') is-invalid @enderror" placeholder="Facebook">
                                         @error('facebook')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -248,7 +248,7 @@
                                         <input type="text" name="twitter" value="{{ $company_setting->twitter }}"
                                             class="@error('twitter') is-invalid @enderror" placeholder="Twitter">
                                         @error('twitter')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -258,7 +258,7 @@
                                         <input type="text" name="instagram" value="{{ $company_setting->instagram }}"
                                             class="@error('instagram') is-invalid @enderror" placeholder="Instagram">
                                         @error('instagram')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -268,7 +268,7 @@
                                         <input type="text" name="whatsapp" value="{{ $company_setting->whatsapp }}"
                                             class="@error('whatsapp') is-invalid @enderror" placeholder="Whatsapp">
                                         @error('whatsapp')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -278,7 +278,7 @@
                                         <textarea name="about" value="{{ $company_setting->about }}" class="@error('about') is-invalid @enderror"
                                             placeholder="Type here" rows="6"></textarea>
                                         @error('about')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -289,7 +289,7 @@
                                             value="{{ $company_setting->meta_title }}"
                                             class="@error('meta_title') is-invalid @enderror" placeholder="Meta Title">
                                         @error('meta_title')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -301,7 +301,7 @@
                                             class="@error('meta_keywords') is-invalid @enderror"
                                             placeholder="Meta Keywords">
                                         @error('meta_keywords')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -311,7 +311,7 @@
                                         <textarea name="meta_description" value="{{ $company_setting->meta_description }}"
                                             class="@error('meta_description') is-invalid @enderror" placeholder="Type here" rows="4"></textarea>
                                         @error('meta_description')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
@@ -321,7 +321,7 @@
                                         <textarea name="about_footer" value="{{ $company_setting->about_footer }}"
                                             class="@error('about_footer') is-invalid @enderror" placeholder="Type here" rows="2"></textarea>
                                         @error('about_footer')
-                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
