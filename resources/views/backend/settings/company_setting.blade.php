@@ -58,46 +58,27 @@
                         <div class="profile-info">
                             <div class="row d-flex">
                                 <div class="col-lg-6">
-                                    {{-- <div class=" align-items-center mb-30">
-                                        <div class="profile-image mb-10">
-                                            <img src="{{ asset('') }}backend/assets/images/profile/profile-1.png"
-                                                alt="">
-                                            <div class="update-image">
-                                                <input type="file" name="logo" id="logo">
-                                                <label for="logo"><i class="lni lni-cloud-upload"></i></label>
-                                                @error('logo')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                        <div class="profile-meta">
-                                            <h5 class="text-bold text-dark mb-10">Main Logo</h5>
-                                        </div>
-                                    </div> --}}
-
                                     <section class="container max-w-xl mx-auto flex flex-col py-8">
                                         <div class="py-8">
-                                            <p class="block text-sm leading-5 font-medium text-gray-700 mb-4">
-                                                Custom file input
-                                            </p>
+                                            <div class="profile-meta">
+                                                <h5 class="text-bold text-dark mb-10">Main Logo</h5>
+                                            </div>
                                             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
                                             <div x-data="imageData()" class="file-input flex items-center">
-
                                                 <!-- Preview Image -->
-                                                <div class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                                                <div class="w-25 h-25 p-3 rounded-full overflow-hidden bg-gray-100">
                                                     <!-- Placeholder image -->
                                                     <div x-show="!previewPhoto">
-                                                        <svg class="h-full w-full text-gray-300" fill="currentColor"
-                                                            viewBox="0 0 24 24">
+                                                        <svg class=" h-full w-full rounded-full text-gray-300"
+                                                            fill="currentColor" viewBox="0 0 24 24">
                                                             <path
                                                                 d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                                                         </svg>
                                                     </div>
                                                     <!-- Show a preview of the photo -->
-                                                    <div x-show="previewPhoto"
-                                                        class="h-12 w-12 rounded-full overflow-hidden">
-                                                        <img :src="previewPhoto" alt=""
-                                                            class="h-12 w-12 object-cover">
+                                                    <div x-show="previewPhoto" class="profile-image mb-1">
+                                                        <img :src="previewPhoto" class="object-fit-cover"
+                                                            style="height: 75px; width:75px" alt="">
                                                     </div>
                                                 </div>
 
@@ -106,9 +87,9 @@
                                                     <div class="ml-5 rounded-md shadow-sm">
                                                         <!-- Replace the file input styles with our own via the label -->
                                                         <input @change="updatePreview($refs)" x-ref="input" type="file"
-                                                            accept="image/*,capture=camera" name="photo" id="photo"
+                                                            accept="image/*,capture=camera" name="logo" id="logo"
                                                             class="custom">
-                                                        <label for="photo"
+                                                        <label for="logo"
                                                             class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-indigo-500 hover:border-indigo-300 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo active:bg-gray-50 active:text-indigo-800 transition duration-150 ease-in-out">
                                                             Upload Photo
                                                         </label>
@@ -119,8 +100,8 @@
                                                         <!-- Removes the selected file -->
                                                         <button x-show="fileName" @click="clearPreview($refs)"
                                                             type="button" aria-label="Remove image" class="mx-1 mt-1">
-                                                            <svg viewBox="0 0 20 20" fill="currentColor"
-                                                                class="x-circle w-4 h-4" aria-hidden="true"
+                                                            <svg viewBox="0 0 20 20" fill="currentColor" class="x-circle"
+                                                                aria-hidden="true" height="20px" width="20px"
                                                                 focusable="false">
                                                                 <path fill-rule="evenodd"
                                                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
@@ -136,23 +117,63 @@
                                     </section>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class=" align-items-center mb-30">
-                                        <div class="profile-image mb-10">
-                                            <img src="{{ asset('') }}backend/assets/images/profile/profile-1.png"
-                                                alt="">
-                                            <div class="update-image">
-                                                <input type="file" name="footer_logo" id="footer_logo">
-                                                <label for="footer_logo"><i class="lni lni-cloud-upload"></i></label>
-                                                @error('footer_logo')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
+                                    <section class="container max-w-xl mx-auto flex flex-col py-8">
+                                        <div class="py-8">
+                                            <div class="profile-meta">
+                                                <h5 class="text-bold text-dark mb-10">Footer Logo</h5>
+                                            </div>
+                                            <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
+                                            <div x-data="imageData()" class="file-input flex items-center">
+                                                <!-- Preview Image -->
+                                                <div class="w-25 h-25 p-3 rounded-full overflow-hidden bg-gray-100">
+                                                    <!-- Placeholder image -->
+                                                    <div x-show="!previewPhoto">
+                                                        <svg class=" h-full w-full rounded-full text-gray-300"
+                                                            fill="currentColor" viewBox="0 0 24 24">
+                                                            <path
+                                                                d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                                        </svg>
+                                                    </div>
+                                                    <!-- Show a preview of the photo -->
+                                                    <div x-show="previewPhoto" class="profile-image mb-1">
+                                                        <img :src="previewPhoto" class="object-fit-cover"
+                                                            style="height: 75px; width:75px" alt="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex items-center">
+                                                    <!-- File Input -->
+                                                    <div class="ml-5 rounded-md shadow-sm">
+                                                        <!-- Replace the file input styles with our own via the label -->
+                                                        <input @change="updatePreview($refs)" x-ref="input" type="file"
+                                                            accept="image/*,capture=camera" name="footer_logo"
+                                                            id="footer_logo" class="custom">
+                                                        <label for="footer_logo"
+                                                            class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-indigo-500 hover:border-indigo-300 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo active:bg-gray-50 active:text-indigo-800 transition duration-150 ease-in-out">
+                                                            Upload Photo
+                                                        </label>
+                                                    </div>
+                                                    <div class="flex items-center text-sm text-gray-500 mx-2">
+                                                        <!-- Display the file name when available -->
+                                                        <span x-text="fileName || emptyText"></span>
+                                                        <!-- Removes the selected file -->
+                                                        <button x-show="fileName" @click="clearPreview($refs)"
+                                                            type="button" aria-label="Remove image" class="mx-1 mt-1">
+                                                            <svg viewBox="0 0 20 20" fill="currentColor" class="x-circle"
+                                                                aria-hidden="true" height="20px" width="20px"
+                                                                focusable="false">
+                                                                <path fill-rule="evenodd"
+                                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                                                    clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+
                                             </div>
                                         </div>
-                                        <div class="profile-meta">
-                                            <h5 class="text-bold text-dark mb-10">Footer Logo</h5>
-                                            {{-- <p class="text-sm text-gray">Web &amp; UI/UX Design</p> --}}
-                                        </div>
-                                    </div>
+                                    </section>
                                 </div>
                             </div>
                             <br />
