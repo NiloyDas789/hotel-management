@@ -139,7 +139,7 @@
                                 <div class="info">
                                     <h6>{{ auth()->user()->name }}</h6>
                                     <div class="image">
-                                        <img src="backend/assets/images/profile/profile-image.png" alt="" />
+                                        <img src="{{ setImage(auth()->user()->image) }}" alt="" srcset="">
                                         <span class="status"></span>
                                     </div>
                                 </div>
