@@ -31,11 +31,11 @@
 
 
     <!-- ======== sidebar-nav end =========== -->
-    @include('includes.leftside-nav')
+    @include('includes.backend.leftside-nav')
     <!-- ======== main-wrapper start =========== -->
     <main class="main-wrapper">
         <!-- ========== header start ========== -->
-        @include('includes.top-nav')
+        @include('includes.backend.top-nav')
         <!-- ========== header end ========== -->
 
         <!-- ========== section start ========== -->
@@ -46,7 +46,7 @@
         <!-- ========== section end ========== -->
 
         <!-- ========== footer start =========== -->
-        @include('includes.footer')
+        @include('includes.backend.footer')
         <!-- ========== footer end =========== -->
     </main>
     <!-- ======== main-wrapper end =========== -->
