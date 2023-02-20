@@ -66,10 +66,10 @@
                                             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
                                             <div x-data="imageData()" class="file-input flex items-center">
                                                 <!-- Preview Image -->
-                                                <div class="w-25 h-25 p-3 rounded-full overflow-hidden bg-gray-100">
+                                                <div class="p-3 rounded-full overflow-hidden bg-gray-100">
                                                     <!-- Placeholder image -->
-                                                    <div x-show="!previewPhoto">
-                                                        <img src="{{ setImage($company_setting->logo) }}" alt=""
+                                                    <div x-show="!previewPhoto"  class="profile-image mb-1">
+                                                        <img src="{{ setImage($company_setting->logo) }}" class="object-fit-cover" style="height: 75px; width:75px" alt=""
                                                             srcset="">
                                                     </div>
                                                     <!-- Show a preview of the photo -->
@@ -122,16 +122,14 @@
                                             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
                                             <div x-data="imageData()" class="file-input flex items-center">
                                                 <!-- Preview Image -->
-                                                <div class="w-25 h-25 p-3 rounded-full overflow-hidden bg-gray-100">
+                                                <div class="p-3 overflow-hidden bg-gray-100">
                                                     <!-- Placeholder image -->
-                                                    <div x-show="!previewPhoto">
-                                                        <img src="{{ setImage($company_setting->footer_logo) }}"
-                                                            alt="" srcset="">
+                                                    <div x-show="!previewPhoto"  class="profile-image mb-1">
+                                                        <img src="{{ setImage($company_setting->footer_logo) }}" class="object-fit-cover" style="height: 75px; width:75px" alt="" srcset="">
                                                     </div>
                                                     <!-- Show a preview of the photo -->
                                                     <div x-show="previewPhoto" class="profile-image mb-1">
-                                                        <img :src="previewPhoto" class="object-fit-cover"
-                                                            style="height: 75px; width:75px" alt="">
+                                                        <img :src="previewPhoto" class="object-fit-cover" style="height: 75px; width:75px"  alt="">
                                                     </div>
                                                 </div>
 

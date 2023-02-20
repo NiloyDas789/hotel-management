@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/css/fullcalendar.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/css/main.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/css/alpine-modal.css') }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.css" />
     @stack('style')
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -61,7 +62,39 @@
     <script src="{{ asset('backend/assets/js/world-merc.js') }}"></script>
     <script src="{{ asset('backend/assets/js/polyfill.js') }}"></script>
     <script src="{{ asset('backend/assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.js"></script>
     @stack('script')
+
+    <script>
+        function toast(status, title, text) {
+            new Notify({
+                status: status,
+                title: title,
+                text: text,
+                effect: 'fade',
+                speed: 300,
+                customClass: null,
+                customIcon: null,
+                showIcon: true,
+                showCloseButton: true,
+                autoclose: true,
+                autotimeout: 2000,
+                gap: 20,
+                distance: 20,
+                type: 1,
+                position: 'right top'
+            })
+        }
+    </script>
+    @if (Session::has('success'))
+        <script>
+            toast('success', 'Success', "{{ Session::get('success') }}")
+        </script>
+    @elseif (Session::has('error'))
+        <script>
+            toast('error', 'Error', "{{ Session::get('error') }}")
+        </script>
+    @endif
 
     <script>
         // ======== jvectormap activation
