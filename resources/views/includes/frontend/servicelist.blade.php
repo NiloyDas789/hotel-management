@@ -10,11 +10,11 @@
                     <div><!-- Services Item #1 -->
                         <div class="uk-card uk-card-default uk-box-shadow-hover-xlarge impx-service-card uk-padding-bottom">
                             <div class="uk-card-media-top">
-                                <img src="{{asset('frontend/assets')}}/images/service-1.jpg" alt="">
+                                <img src="{{asset('frontend/assets')}}/images/services/room.jpg" alt="">
                             </div>
                             <div class="uk-card-body uk-card-small uk-text-center">
                                 <div class="uk-card-badge uk-label uk-label-danger bg-color-aqua">Hotel &amp; Resort</div>
-                                <p>Alterum significari idem, ut si diceretur, officia media omnia aut pleraque servantem vivere</p>
+                                <p>We offer comfortable rooms with modern amenities and attentive staff to ensure guests have a relaxing stay at Khagrachori. Here you can have perfect backdrop for outdoor activities such as hiking, trekking, and exploring waterfalls and rivers. It is also home to various indigenous communities that offer a glimpse into their culture and traditions.</p>
                                 <a href="#" class="uk-button uk-button-default uk-button-small impx-button gold impx-button-outline outline-gold button-wide impx-button-rounded small-border">Learn More &raquo;</a>
                             </div>
                         </div>
@@ -22,11 +22,11 @@
                     <div><!-- Services Item #2 -->
                         <div class="uk-card uk-card-default uk-box-shadow-hover-xlarge impx-service-card">
                             <div class="uk-card-media-top">
-                                <img src="{{asset('frontend/assets')}}/images/service-2.jpg" alt="">
+                                <img src="{{asset('frontend/assets')}}/images/services/parking.jpg" alt="">
                             </div>
                             <div class="uk-card-body uk-card-small uk-text-center">
-                                <div class="uk-card-badge uk-label uk-label-danger bg-color-aqua">Restaurant</div>
-                                <p>Alterum significari idem, ut si diceretur, officia media omnia aut pleraque servantem vivere</p>
+                                <div class="uk-card-badge uk-label uk-label-danger bg-color-aqua">Parking</div>
+                                <p>Our parking facility is a convenient and secure area for tourists to park their vehicles during their stay. It is equipped with security measures such as cameras or attendants to ensure the safety of the parked vehicles. It adds convenience for tourists who are traveling by car, making their stay more comfortable and hassle-free.</p>
                                 <a href="#" class="uk-button uk-button-default uk-button-small impx-button gold impx-button-outline outline-gold button-wide impx-button-rounded small-border">Learn More &raquo;</a>
                             </div>
                         </div>
@@ -34,11 +34,11 @@
                     <div><!-- Services Item #3 -->
                         <div class="uk-card uk-card-default uk-box-shadow-hover-xlarge impx-service-card">
                             <div class="uk-card-media-top">
-                                <img src="{{asset('frontend/assets')}}/images/service-3.jpg" alt="">
+                                <img src="{{asset('frontend/assets')}}/images/services/geyser.jpg" alt="">
                             </div>
                             <div class="uk-card-body uk-card-small uk-text-center">
-                                <div class="uk-card-badge uk-label uk-label-danger bg-color-aqua">Spa</div>
-                                <p>Alterum significari idem, ut si diceretur, officia media omnia aut pleraque servantem vivere</p>
+                                <div class="uk-card-badge uk-label uk-label-danger bg-color-aqua">Water Heater (Geyser)</div>
+                                <p>Our water heater facility is an essential feature that ensures tourists have access to hot water for their daily needs. It heats and stores water that is available for guests to use in their rooms for showering, bathing, and other purposes. The water heater is designed to provide a continuous supply of hot water, so guests can enjoy a comfortable and relaxing stay.</p>
                                 <a href="#" class="uk-button uk-button-default uk-button-small impx-button gold impx-button-outline outline-gold button-wide impx-button-rounded small-border">Learn More &raquo;</a>
                             </div>
                         </div>
@@ -46,11 +46,11 @@
                     <div><!-- Services Item #4 -->
                         <div class="uk-card uk-card-default uk-box-shadow-hover-xlarge impx-service-card">
                             <div class="uk-card-media-top">
-                                <img src="{{asset('frontend/assets')}}/images/service-4.jpg" alt="">
+                                <img src="{{asset('frontend/assets')}}/images/services/wifi.jpg" alt="">
                             </div>
                             <div class="uk-card-body uk-card-small uk-text-center">
-                                <div class="uk-card-badge uk-label uk-label-danger bg-color-aqua">Outdoor</div>
-                                <p>Alterum significari idem, ut si diceretur, officia media omnia aut pleraque servantem vivere</p>
+                                <div class="uk-card-badge uk-label uk-label-danger bg-color-aqua">Full Wifi Coverage</div>
+                                <p>Our wifi facility is a convenient amenity for tourists who need internet access during their stay. It provides high-speed wireless internet access throughout the hotel premises, including guest rooms, lobby, and common areas. The wifi network is password-protected and secure, ensuring that guests can safely browse the internet and conduct online activities. </p>
                                 <a href="#" class="uk-button uk-button-default uk-button-small impx-button gold impx-button-outline outline-gold button-wide impx-button-rounded small-border">Learn More &raquo;</a>
                             </div>
                         </div>
