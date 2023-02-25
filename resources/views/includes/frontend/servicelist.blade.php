@@ -26,7 +26,7 @@
                             </div>
                             <div class="uk-card-body uk-card-small uk-text-center">
                                 <div class="uk-card-badge uk-label uk-label-danger bg-color-aqua">Parking</div>
-                                <p>Our parking facility is a convenient and secure area for tourists to park their vehicles during their stay. It is equipped with security measures such as cameras or attendants to ensure the safety of the parked vehicles. It adds convenience for tourists who are traveling by car, making their stay more comfortable and hassle-free.</p>
+                                <p>Our parking facility is a convenient and secure area for tourists to park their vehicles during their stay. It is equipped with security measures such as cameras or attendants to ensure the safety of the parked vehicles. It adds convenience for tourists who are traveling by car, making their stay more comfortable and hassle-free in Khagrachori.</p>
                                 <a href="#" class="uk-button uk-button-default uk-button-small impx-button gold impx-button-outline outline-gold button-wide impx-button-rounded small-border">Learn More &raquo;</a>
                             </div>
                         </div>

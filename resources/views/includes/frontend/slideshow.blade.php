@@ -8,7 +8,7 @@
                     <ul class="uk-slideshow-items">
                         <li><!-- Slideshow Item #1 -->
                             <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-bottom-center">
-                                <img src="{{asset('frontend/assets')}}/images/slideshow/hotel/nature-1.jpg" alt="" data-uk-cover="height:319px">
+                                <img src="{{asset('frontend/assets')}}/images/slideshow/hotel/hotel-1.jpg" alt="" data-uk-cover="height:319px">
                                 <div class="uk-overlay-primary uk-position-cover impx-overlay dark"></div>
                             </div>
                             <div class="uk-container uk-position-relative uk-height-1-1">
