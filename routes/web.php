@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Backend\CompanySettingController;
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\Backend\RoleController;
+use App\Http\Controllers\Backend\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.index');
+    return view('welcome');
 });
 
 // Route::get('/dashboard', function () {
@@ -32,7 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
-    Route::resource('roles', RoleController::class);
+    Route::resource('role', RoleController::class);
     Route::resource('user', UserController::class);
     Route::get('settings/company-setting', [CompanySettingController::class, 'editCompanySetting'])->name('company-setting.edit');
     Route::post('settings/company-setting', [CompanySettingController::class, 'updateCompanySetting'])->name('company-setting.update');
