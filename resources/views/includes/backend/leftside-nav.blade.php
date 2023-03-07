@@ -93,10 +93,19 @@
                     <span class="text">Setting </span>
                 </a>
                 <ul id="ddmenu_4"
-                    class="collapse dropdown-nav {{ request()->is('settings/company-setting') || request()->is('role') ? 'show' : null }}">
+                    class="collapse dropdown-nav {{ request()->is('settings/company-setting') || request()->is('role') || request()->is('role/assign') ? 'show' : null }}">
                     @can('role.access')
                         <li>
-                            <a href="{{ route('role.index') }}"> Role </a>
+                            <a href="{{ route('role.index') }}"
+                                class="{{ request()->is('role/create') || request()->is('role') ? 'active' : null }}">
+                                Role
+                            </a>
+                        </li>
+                    @endcan
+                    @can('role_permission.assign')
+                        <li>
+                            <a href="{{ route('role.assign') }}"
+                                class="{{ request()->is('role/assign') ? 'active' : null }}"> Role Assign </a>
                         </li>
                     @endcan
                     {{-- @can('permission.access')

@@ -33,9 +33,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
+    Route::get('role/assign', [RoleController::class, 'assign'])->name('role.assign');
+    Route::post('role/assign', [RoleController::class, 'storeAssign'])->name('assign.store');
     Route::resource('role', RoleController::class);
     Route::resource('user', UserController::class);
+
     Route::get('settings/company-setting', [CompanySettingController::class, 'editCompanySetting'])->name('company-setting.edit');
     Route::post('settings/company-setting', [CompanySettingController::class, 'updateCompanySetting'])->name('company-setting.update');
 });

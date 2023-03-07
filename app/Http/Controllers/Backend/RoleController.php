@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
@@ -122,5 +123,22 @@ class RoleController extends Controller
         $role->delete();
         return redirect()->route('role.index')
                         ->with('success', 'Role deleted successfully');
+    }
+
+    public function assign()
+    {
+        $this->checkPermission('role_permission.assign');
+        $users = User::all();
+        $roles = Role::all();
+        return view('backend.role.assign', compact('users', 'roles'));
+    }
+
+    public function storeAssign(Request $request)
+    {
+        $this->checkPermission('role_permission.assign');
+        User::findOrFail($request->input('user_id'))
+            ->syncRoles($request->input('role_id'));
+
+        return redirect()->route('role.assign')->with('success', 'Role assigned to user successfully.');
     }
 }

@@ -66,11 +66,9 @@ class UserSeeder extends Seeder
             ['name' => 'role.show'],
             ['name' => 'role.delete'],
 
-            ['name' => 'permission.access'],
-            ['name' => 'permission.create'],
-            ['name' => 'permission.edit'],
-            ['name' => 'permission.show'],
-            ['name' => 'permission.delete'],
+            ['name' => 'role_permission.assign'],
+
+
         ];
 
         foreach ($permissions as $permission) {
@@ -79,12 +77,6 @@ class UserSeeder extends Seeder
             ]);
         };
 
-
-        foreach ($permissions as $permission) {
-            Permission::create([
-                'name' => $permission["name"]
-            ]);
-        };
 
         //get all permissions via Gate::before rule; see AuthServiceProvider
         Role::create([
