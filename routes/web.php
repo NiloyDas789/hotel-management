@@ -16,10 +16,26 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Frontend Routes
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('frontend.index');
+})->name('home');
+
+Route::get('/rooms', function () {
+    return view('frontend.rooms');
+})->name('rooms');
+
+Route::get('/blog', function () {
+    return view('frontend.blog');
+})->name('blog');
+
+Route::get('/gallery', function () {
+    return view('frontend.gallery');
+})->name('gallery');
+
+
+// Frontend Routes End
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
